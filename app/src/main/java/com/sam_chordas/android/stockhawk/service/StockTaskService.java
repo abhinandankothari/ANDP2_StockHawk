@@ -16,6 +16,9 @@ import com.sam_chordas.android.stockhawk.rest.Utils;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+
+import org.json.JSONException;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -123,14 +126,13 @@ public class StockTaskService extends GcmTaskService{
           }
           mContext.getContentResolver().applyBatch(QuoteProvider.AUTHORITY,
               Utils.quoteJsonToContentVals(getResponse));
-        }catch (RemoteException | OperationApplicationException e){
+        }catch (RemoteException | OperationApplicationException | JSONException e){
           Log.e(LOG_TAG, "Error applying batch insert", e);
         }
       } catch (IOException e){
         e.printStackTrace();
       }
     }
-
     return result;
   }
 
