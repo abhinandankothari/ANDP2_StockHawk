@@ -28,7 +28,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <receiver android:name=".ui.StocksAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/stocks_appwidget_info" />
+        </receiver>
         <service
             android:name="com.sam_chordas.android.stockhawk.service.StockTaskService"
             android:exported="true"
