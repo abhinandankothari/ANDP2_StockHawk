@@ -25,7 +25,7 @@ public class StocksAppWidgetProvider extends AppWidgetProvider {
             // Get the layout for the App Widget and attach an on-click listener
             // to the button
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.stocks_widget);
-            views.setOnClickPendingIntent(R.id.button, pendingIntent);
+            views.setOnClickPendingIntent(R.id.stocks_widget, pendingIntent);
 
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);
