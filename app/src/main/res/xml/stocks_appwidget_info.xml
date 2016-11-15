@@ -4,7 +4,7 @@
     android:minWidth="180dp"
     android:updatePeriodMillis="0"
     android:previewImage="@mipmap/ic_widget"
-    android:initialLayout="@layout/activity_my_stocks"
+    android:initialLayout="@layout/layout_widget_list"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen">
 </appwidget-provider>

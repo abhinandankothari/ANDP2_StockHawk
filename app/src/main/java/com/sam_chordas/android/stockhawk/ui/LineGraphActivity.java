@@ -60,6 +60,7 @@ public class LineGraphActivity extends AppCompatActivity {
 
     }
 
+
     private Date monthAgo() {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MONTH, -1);
